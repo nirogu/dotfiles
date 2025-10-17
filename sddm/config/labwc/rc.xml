@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<labwc_config>
+
+<keyboard>
+    <keybind key="A-Space">
+      <action name="ShowMenu" menu="client-menu" />
+    </keybind>
+    <keybind key="A-k">
+      <action name="Execute">
+        <command>wvkbd-mobintl</command>
+      </action>
+    </keybind>
+</keyboard>
+
+  <mouse>
+    <default />
+  </mouse>
+  <libinput>
+    <device category="default">
+      <naturalScroll>no</naturalScroll>
+      <pointerSpeed>0.8</pointerSpeed>
+      <accelProfile>adaptive</accelProfile>
+      <tap>yes</tap>
+      <disableWhileTyping>yes</disableWhileTyping>
+    </device>
+  </libinput>
+</labwc_config>

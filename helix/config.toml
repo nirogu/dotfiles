@@ -1,0 +1,70 @@
+theme = "everforest_dark"
+
+[editor]
+line-number = "relative"
+cursorline = true
+color-modes = true
+bufferline = "always"
+text-width = 72
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "read-only-indicator", "file-modification-indicator"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "file-encoding", "register", "file-type", "position-percentage", "position"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = true
+
+[editor.soft-wrap]
+enable = true
+
+[keys.normal]
+A-right = [":bn"]
+A-left = [":bp"]
+A-h = [":bn"]
+A-l = [":bp"]
+X = ["extend_line_up", "extend_to_line_bounds"]
+G = ["goto_last_line"]
+# Move line or selection up/down
+A-k = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before"
+]
+A-j = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_down",
+  "paste_before"
+]
+A-up = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before"
+]
+A-down = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_down",
+  "paste_before"
+]
+
+[keys.select]
+X = ["extend_line_up", "extend_to_line_bounds"]

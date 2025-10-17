@@ -1,0 +1,12 @@
+[pull]
+	rebase = true
+[gpg]
+	format = ssh
+[commit]
+	gpgSign = true
+[init]
+	defaultBranch = main
+[push]
+	followTags = true
+[format]
+	signOff = yes
