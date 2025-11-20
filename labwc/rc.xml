@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!--
-  This file contains all supported Labwc v0.9.0 config elements & attributes with mostly
+  This file contains all supported Labwc v0.9.2 config elements & attributes with mostly
   default values. Some LXQt specific settings have been added. You may have a
   updated version in /usr/share/docs/labwc/rc.xml.all
 -->
@@ -34,6 +34,7 @@
     </titlebar>
     <cornerRadius>8</cornerRadius>
     <keepBorder>yes</keepBorder>
+    <maximizedDecoration>titlebar</maximizedDecoration>
     <dropShadows>yes</dropShadows>
     <dropShadowsOnTiled>no</dropShadowsOnTiled>
     <font place="ActiveWindow">
@@ -67,7 +68,7 @@
       <weight>normal</weight>
     </font>
   </theme>
-  <windowSwitcher show="yes" preview="yes" outlines="yes" allWorkspaces="no">
+  <windowSwitcher show="yes" style="thumbnail" preview="yes" outlines="yes" allWorkspaces="no">
     <fields>
       <field content="icon" width="5%"/>
       <field content="desktop_entry_name" width="30%"/>
@@ -143,7 +144,8 @@
   </focus>
   <snapping>
     <!-- Set range to 0 to disable window snapping completely -->
-    <range>1</range>
+    <range>10</range>
+    <cornerRange>50</cornerRange>
     <overlay enabled="yes">
       <delay inner="500" outer="500"/>
     </overlay>
@@ -240,20 +242,25 @@
     <keybind key="W-S-r">
       <action name="Reconfigure"/>
     </keybind>
-    <!-- LXQt Keybindings -->
-    <!-- For advanced shortcut handling please consult
-    https://github.com/lxqt/lxqt/wiki/Wayland#global-shortcuts -->
+    <!-- LXQt Keybindings
+    To open applications inside LXQt session use `lxqt-qdbus run <application>` or
+    `qdbus6 org.lxqt.session /LXQtSession execDesktopFile <desktopfile>`
+    See https://lxqt-project.org/wiki/Wayland-Session#global-shortcuts
+    -->
     <keybind key="Super_L" onRelease="yes">
-      <action name="Execute" command="dbus-send --session --dest=org.kde.StatusNotifierWatcher --type=method_call /global_key_shortcuts/panel/fancymenu/show_hide org.lxqt.global_key_shortcuts.client.activated"/>
+      <action name="Execute" command="lxqt-qdbus openmenu"/>
     </keybind>
     <keybind key="W-e">
-      <action name="Execute" command="pcmanfm-qt"/>
+      <action name="Execute" command="lxqt-qdbus run pcmanfm-qt"/>
+    </keybind>
+    <keybind key="W-d">
+      <action name="Execute" command="lxqt-qdbus showdesktop"/>
     </keybind>
     <keybind key="W-b">
-      <action name="Execute" command="librewolf"/>
+      <action name="Execute" command="lxqt-qdbus run librewolf"/>
     </keybind>
     <keybind key="W-Return">
-      <action name="Execute" command="foot"/>
+      <action name="Execute" command="lxqt-qdbus run foot"/>
     </keybind>
     <keybind key="W-c">
       <action name="Execute" command="codium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"/>
@@ -262,7 +269,7 @@
       <action name="Execute" command="lxqt-runner"/>
     </keybind>
     <keybind key="Print">
-      <action name="Execute" command="screengrab"/>
+      <action name="Execute" command="lxqt-qdbus run screengrab"/>
     </keybind>
     <keybind key="W-Backspace">
       <action name="Execute" command="lxqt-leave"/>
@@ -296,28 +303,28 @@
       <action name="ToggleMaximize"/>
     </keybind>
     <keybind key="W-Left">
-      <action name="SnapToEdge" direction="left"/>
+      <action name="SnapToEdge" direction="left" combine="yes"/>
     </keybind>
     <keybind key="W-Right">
-      <action name="SnapToEdge" direction="right"/>
+      <action name="SnapToEdge" direction="right" combine="yes"/>
     </keybind>
     <keybind key="W-Up">
-      <action name="SnapToEdge" direction="up"/>
+      <action name="SnapToEdge" direction="up" combine="yes"/>
     </keybind>
     <keybind key="W-Down">
-      <action name="SnapToEdge" direction="down"/>
+      <action name="SnapToEdge" direction="down" combine="yes"/>
     </keybind>
     <keybind key="A-Space">
       <action name="ShowMenu" menu="client-menu" atCursor="no"/>
     </keybind>
     <keybind key="XF86_AudioLowerVolume">
-      <action name="Execute" command="amixer sset Master 5%-"/>
+      <action name="Execute" command="lxqt-qdbus volume down"/>
     </keybind>
     <keybind key="XF86_AudioRaiseVolume">
-      <action name="Execute" command="amixer sset Master 5%+"/>
+      <action name="Execute" command="lxqt-qdbus volume up"/>
     </keybind>
     <keybind key="XF86_AudioMute">
-      <action name="Execute" command="amixer sset Master toggle"/>
+      <action name="Execute" command="lxqt-qdbus volume mute"/>
     </keybind>
     <keybind key="XF86_MonBrightnessUp">
       <action name="Execute" command="lxqt-config-brightness -i"/>
@@ -396,44 +403,13 @@
         <action name="Resize"/>
       </mousebind>
     </context>
-    <context name="Top">
-      <mousebind button="Left" action="Drag">
-        <action name="Resize"/>
+    <context name="Border">
+      <mousebind button="Left" action="Press">
+        <action name="Focus" />
+        <action name="Raise" />
       </mousebind>
-    </context>
-    <context name="Left">
       <mousebind button="Left" action="Drag">
-        <action name="Resize"/>
-      </mousebind>
-    </context>
-    <context name="Right">
-      <mousebind button="Left" action="Drag">
-        <action name="Resize"/>
-      </mousebind>
-    </context>
-    <context name="Bottom">
-      <mousebind button="Left" action="Drag">
-        <action name="Resize"/>
-      </mousebind>
-    </context>
-    <context name="TRCorner">
-      <mousebind button="Left" action="Drag">
-        <action name="Resize"/>
-      </mousebind>
-    </context>
-    <context name="BRCorner">
-      <mousebind button="Left" action="Drag">
-        <action name="Resize"/>
-      </mousebind>
-    </context>
-    <context name="TLCorner">
-      <mousebind button="Left" action="Drag">
-        <action name="Resize"/>
-      </mousebind>
-    </context>
-    <context name="BLCorner">
-      <mousebind button="Left" action="Drag">
-        <action name="Resize"/>
+        <action name="Resize" />
       </mousebind>
     </context>
     <context name="TitleBar">
@@ -621,7 +597,7 @@
     <device category="touchpad">
       <naturalScroll>yes</naturalScroll>
       <leftHanded>no</leftHanded>
-      <pointerSpeed>0.7</pointerSpeed>
+      <pointerSpeed>0.5</pointerSpeed>
       <accelProfile/>
       <tap>yes</tap>
       <tapButtonMap>lrm</tapButtonMap>
