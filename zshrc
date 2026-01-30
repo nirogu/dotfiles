@@ -38,7 +38,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Extend PATH as needed
 export PATH=$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.go/bin:$HOME/.cargo/bin
 # Environment variables
-export EDITOR=nvim
+export EDITOR=helix
 export VISUAL=$EDITOR
 # Aliases
 gitup() { git add -A ; git commit -m "$1" ; git push; }

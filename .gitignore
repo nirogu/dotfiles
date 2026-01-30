@@ -1,5 +1,7 @@
+Joplin
 QDirStat
 0ad
+EOS-greeter.conf
 Eqonomize
 IVPN
 Raspberry Pi
@@ -7,6 +9,7 @@ VSCodium
 aerc
 bottom
 btop
+chromium
 dconf
 featherpad
 fltk.org
@@ -15,17 +18,23 @@ gh
 go
 google-chrome
 htop
+joplin-desktop
 keepassxc
 lazydocker
 lazygit
+legcord
 libreoffice
+librewolf
 lximage-qt
+mozilla
 mpc-qt
 net.imput.helium
+nomacs
 octave
 pavucontrol-qt
 pulse
 qalculate
+qBittorrent
 qpdfview
 qps
 qterminal.org
