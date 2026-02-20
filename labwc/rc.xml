@@ -262,7 +262,7 @@
       <action name="Execute" command="lxqt-qdbus showdesktop"/>
     </keybind>
     <keybind key="W-b">
-      <action name="Execute" command="lxqt-qdbus run librewolf"/>
+      <action name="Execute" command="lxqt-qdbus run helium-browser"/>
     </keybind>
     <keybind key="W-Return">
       <action name="Execute" command="lxqt-qdbus run foot"/>
