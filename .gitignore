@@ -7,10 +7,13 @@ IVPN
 Raspberry Pi
 VSCodium
 aerc
+balenaEtcher
 bottom
 btop
+byobu
 chromium
 dconf
+electron-builder.json
 featherpad
 fltk.org
 fontforge
@@ -32,6 +35,7 @@ net.imput.helium
 nomacs
 octave
 pavucontrol-qt
+pavucontrol.ini
 pulse
 qalculate
 qBittorrent
@@ -48,3 +52,4 @@ user-dirs.dirs
 user-dirs.locale
 autostart
 spotify-player
+vlc
