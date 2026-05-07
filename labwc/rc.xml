@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!--
-  This file contains all supported Labwc v0.9.6 config elements & attributes with mostly
+  This file contains all supported Labwc v0.9.7 config elements & attributes with mostly
   default values. Some LXQt specific settings have been added. You may have a
   updated version in /usr/share/docs/labwc/rc.xml.all
 
@@ -284,10 +284,20 @@
     <keybind key="F12">
       <action name="Execute" command="qterminal -d"/>
     </keybind>
-    <!-- Powerbutton-->
+    <!-- Powerbuttons-->
     <keybind key="XF86PowerOff">
       <action name="Execute">
         <command>lxqt-leave</command>
+      </action>
+    </keybind>
+    <keybind key="XF86Suspend">
+      <action name="Execute">
+        <command>lxqt-leave --suspend</command>
+      </action>
+    </keybind>
+    <keybind key="XF86Sleep">
+      <action name="Execute">
+        <command>lxqt-leave --hibernate</command>
       </action>
     </keybind>
     <keybind key="A-Tab">
