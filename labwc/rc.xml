@@ -269,7 +269,7 @@
       <action name="Execute" command="lxqt-qdbus run foot"/>
     </keybind>
     <keybind key="W-c">
-      <action name="Execute" command="codium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"/>
+      <action name="Execute" command="gram"/>
     </keybind>
     <keybind key="W-Space">
       <action name="Execute" command="lxqt-runner"/>

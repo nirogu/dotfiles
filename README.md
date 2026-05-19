@@ -26,7 +26,7 @@ Everything goes in `$HOME/.config`, excepting:
 - **Display manager:** [SDDM](https://github.com/sddm/sddm)
 - **Terminal:** [Foot](https://codeberg.org/dnkl/foot) (wayland only)
 - **Shell:** [Zsh](https://www.zsh.org) with the [starship](https://starship.rs) prompt
-- **Text editor:** [Helix](https://helix-editor.com), [AstroNvim](https://astronvim.com) and [VSCodium](https://vscodium.com)
+- **Text editor:** [Helix](https://helix-editor.com), [AstroNvim](https://astronvim.com), [VSCodium](https://vscodium.com) and [Gram](https://gram-editor.com)
 - **Screen locker:** [Swaylock](https://github.com/swaywm/swaylock)
 - **Document reader:** [Zathura](https://pwmt.org/projects/zathura)
 
