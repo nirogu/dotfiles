@@ -41,6 +41,7 @@ export PATH=$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.go/bin:$HOME/.cargo/bin
 # Environment variables
 export EDITOR=helix
 export VISUAL=$EDITOR
+export DO_NOT_TRACK=1
 # Aliases
 gitup() { git add -A ; git commit -m "$1" ; git push; }
 alias cp="cp -i"
