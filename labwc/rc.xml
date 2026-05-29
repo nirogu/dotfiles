@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!--
-  This file contains all supported Labwc v0.9.7 config elements & attributes with mostly
+  This file contains all supported Labwc v0.20.0 config elements & attributes with mostly
   default values. Some LXQt specific settings have been added. You may have a
   updated version in /usr/share/docs/labwc/rc.xml.all
 
@@ -13,6 +13,7 @@
     <adaptiveSync>no</adaptiveSync>
     <allowTearing>no</allowTearing>
     <autoEnableOutputs>yes</autoEnableOutputs>
+    <hdr>no</hdr>
     <reuseOutputMode>no</reuseOutputMode>
     <xwaylandPersistence>no</xwaylandPersistence>
     <primarySelection>yes</primarySelection>
@@ -146,6 +147,7 @@
     <followMouse>no</followMouse>
     <followMouseRequiresMovement>yes</followMouseRequiresMovement>
     <raiseOnFocus>no</raiseOnFocus>
+    <raiseOnFocusDelay>0</raiseOnFocusDelay>
   </focus>
   <snapping>
     <!-- Set inner and outer range to 0 to disable window snapping completely -->
@@ -261,6 +263,9 @@
     </keybind>
     <keybind key="W-d">
       <action name="Execute" command="lxqt-qdbus showdesktop"/>
+      <!--
+      <action name="ToggleShowDesktop"/>
+      -->
     </keybind>
     <keybind key="W-b">
       <action name="Execute" command="lxqt-qdbus run helium-browser"/>
@@ -596,7 +601,8 @@
     a value lower than 1.0 decreases the speed, using a value greater than
     1.0 increases the speed of the cursor.
   -->
-  <tabletTool motion="absolute" relativeMotionSensitivity="1.0"/>
+  <tabletTool motion="absolute" relativeMotionSensitivity="1.0"
+    minPressure="0.0" maxPressure="1.0"/>
   <!--
     The *category* attribute is optional and can be set to touch, touchpad,
     non-touch, default or the name of a device. You can obtain device names by
@@ -610,7 +616,7 @@
       - accelProfile [flat|adaptive]
       - tapButtonMap [lrm|lmr]
       - clickMethod [none|buttonAreas|clickfinger]
-      - scrollMethod [twoFinger|edge|none]
+      - scrollMethod [twoFinger|edge|onbutton|none]
       - sendEventsMode [yes|no|disabledOnExternalMouse]
       - calibrationMatrix [six float values split by space]
       - scrollFactor [float]

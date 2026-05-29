@@ -72,5 +72,5 @@ XCURSOR_THEME=catppuccin-macchiato-green-cursors
 ## For further details, see xkeyboard-config(7)
 ##
 
-XKB_DEFAULT_LAYOUT=us(intl)
+XKB_DEFAULT_LAYOUT=us(altgr-intl)
 XKB_DEFAULT_OPTIONS=grp:ctrls_toggle
