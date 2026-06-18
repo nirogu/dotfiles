@@ -1,35 +1,35 @@
 {
   "node": {
-    "allow_binary_download": true
+    "allow_binary_download": false,
   },
   "lsp": {
     "package-version-server": {
       "binary": {
-        "allow_binary_download": true
+        "allow_binary_download": false,
       },
-      "enable_lsp_tasks": true
+      "enable_lsp_tasks": true,
     },
     "prettier (default)": {
       "binary": {
-        "allow_binary_download": false
+        "allow_binary_download": false,
       },
-      "enable_lsp_tasks": true
+      "enable_lsp_tasks": true,
     },
     "json-language-server": {
       "binary": {
-        "allow_binary_download": true
+        "allow_binary_download": false,
       },
-      "enable_lsp_tasks": true
-    }
+      "enable_lsp_tasks": true,
+    },
   },
   "window_decorations": "client",
   "terminal": {
-    "font_family": "JetBrainsMono Nerd Font"
+    "font_family": "JetBrainsMono Nerd Font",
   },
   "ui_font_size": 14,
   "buffer_font_size": 14,
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "Everforest Light Medium",
     "dark": "Everforest Dark Hard",
   },
