@@ -34,6 +34,7 @@ Everything goes in `$HOME/.config`, excepting:
 <summary>Additional software</summary>
 
 - **Web browser:** [LibreWolf](https://librewolf.net) and [Helium](https://helium.computer)
+- **File manager:** [Superfile](https://superfile.dev)
 - **Email client:** [Thunderbird](https://www.thunderbird.net) and [aerc](https://aerc-mail.org)
 - **Music player:** [Spotify-player](https://github.com/aome510/spotify-player) and [strawbery](https://www.strawberrymusicplayer.org)
 - **Video player:** [MPC-QT](https://mpc-qt.github.io)
