@@ -1,8 +1,28 @@
 {
   "node": {
+    "allow_npm_install": false,
+    "allow_prettier_download": false,
     "allow_binary_download": false,
   },
   "lsp": {
+    "tailwindcss-language-server": {
+      "binary": {
+        "allow_binary_download": false
+      },
+      "enable_lsp_tasks": true
+    },
+    "vscode-css-language-server": {
+      "binary": {
+        "allow_binary_download": false
+      },
+      "enable_lsp_tasks": true
+    },
+    "lemminx": {
+      "binary": {
+        "allow_binary_download": false
+      },
+      "enable_lsp_tasks": true
+    },
     "package-version-server": {
       "binary": {
         "allow_binary_download": false,
