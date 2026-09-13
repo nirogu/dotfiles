@@ -1,0 +1,7 @@
+1788493918 0000 about:blank
+1788149229 0000 about:help
+1788149234 0000 about:lagrange
+1788128775 0000 gemini://geminiprotocol.net/docs/faq-section-1.gmi
+1788128779 0000 gemini://geminiprotocol.net/docs/faq.gmi
+1788128870 0000 gemini://geminiprotocol.net/docs/specification.gmi
+1788128863 0000 gemini://geminiprotocol.net/docs/tech-overview.gmi
