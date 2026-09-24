@@ -1,9 +1,11 @@
 Joplin
 QDirStat
 0ad
+Cemu
 EOS-greeter.conf
 Eqonomize
 IVPN
+PCSX2
 Raspberry Pi
 VSCodium
 aerc
@@ -13,6 +15,8 @@ btop
 byobu
 chromium
 dconf
+dolphin-emu
+eden
 electron-builder.json
 featherpad
 fltk.org
@@ -43,6 +47,7 @@ qpdfview
 qps
 qterminal.org
 reflector-simple-free-params.txt
+retroarch
 screengrab
 spotdl
 strawberry
